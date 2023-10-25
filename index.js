@@ -14,6 +14,7 @@ function  multiTable() {
 }
 multiTable()
 
+
 // Palindrome String Checking using String Method
 function palindromeCheck(str) {
      if (str == str.split('').reverse().join('')) return `${str} is a palindrome`
@@ -36,3 +37,11 @@ function isPalindrome(str) {
     } 
 } 
 console.log(isPalindrome("madam"))
+
+
+// cm to km coversion
+function convert(centimeter) {
+    centimeter  = centimeter / 100000
+    return `${centimeter} km`
+}
+console.log(convert(100000))
