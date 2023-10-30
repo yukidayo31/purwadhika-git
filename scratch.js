@@ -1,3 +1,4 @@
+// square *
 let a = 5
 function stars(rows) {
     let stars = ""
@@ -13,6 +14,7 @@ function stars(rows) {
 console.log(stars(a))
 
 
+// pyramid *
 let b = 5
 function starsPyramid(rows) {
     let starsPyramid = ""
@@ -26,6 +28,8 @@ function starsPyramid(rows) {
 }
 console.log(starsPyramid(b))
 
+
+// reverse * pyramid
 function reverseStarsPyramid(rows) {
     let reverseStarsPyramid = ""
     // menentukan banyaknya rows
