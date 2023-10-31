@@ -163,3 +163,109 @@ function difference(arr1 , arr2) {
     return [...new Set(diffArr)]; 
 }
 console.log(difference([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]))
+
+
+
+
+///////////////////// PART 3
+// write a function that will return primitive data types only.
+// arr = [1, [], undefined, {}, "string", {}, []];
+console.log(typeof (1))
+console.log(typeof ([]))
+console.log(typeof (undefined))
+console.log(typeof ({}))
+console.log(typeof ("string"))
+
+function primitiveDataTypes(dataType) {
+    let a = "string"
+    let b = 1
+    let c = undefined
+    let primArr = []
+    
+    for (i = 0; i < dataType.length; i++) {
+        if (typeof (dataType[i]) == typeof (a)) {
+            primArr.push(dataType[i])
+        } else if (typeof (dataType[i]) == typeof (b)) {
+            primArr.push(dataType[i])
+        } else if (typeof (dataType[i]) == typeof (c)) {
+            primArr.push(dataType[i])
+        }
+    }
+    return primArr
+}
+console.log(primitiveDataTypes([1, [], undefined, {}, "string", {}, []]))
+
+
+// return the second smallest number
+// [5, 3, 1, 7, 2, 6] → 2
+function secSmallNum(arr) {
+    let result = arr.sort(function(lowest, highest){return lowest - highest})
+    return result[1]
+}
+console.log(secSmallNum([5, 3, 1, 7, 2, 6]))
+
+
+// return the sum of all the number
+// mixedArray = ["3", 1, "string", null, false, undefined, 2] → 3
+function sumNum(arr) {
+    let a = 1
+    let newArr = []
+    for (i = 0; i < arr.length; i++) {
+        if (typeof (arr[i]) == typeof (a)) {
+            newArr.push(arr[i])
+            // newArr += arr[i]
+            // total += newArr[i]
+        }
+    }
+    let total = 0
+    for (i in newArr) {
+        total += newArr[i]
+    }
+    return total
+}
+console.log(sumNum(["3", 1, "string", null, false, undefined, 2]))
+
+
+// return sum of duplicate values
+// arr = [10, 20, 40, 10, 50, 30, 10, 60, 10] → 40
+function sumOfDupValues(arr) {
+    let newArr = []
+    for (element of arr) { 
+        if (arr.indexOf(element) !== arr.lastIndexOf(element)) { 
+            newArr.push(element); 
+        } 
+    } 
+    let total = 0
+    for (i in newArr) {
+        total += newArr[i]
+    }
+    return total
+}
+console.log(sumOfDupValues([10, 20, 40, 10, 50, 30, 10, 60, 10]))
+
+
+// game of rock, paper, scissor function
+function game(player1, player2) {
+    if (player1 == "rock" && player2 == "rock") {
+        return "Result: Draw"
+    } else if (player1 == "rock" && player2 == "scissors") {
+        return "Result: Draw"
+    } else if (player1 == "scissors" && player2 == "rock") {
+        return "Result: Player 2 Wins!"
+    } else if (player1 == "rock" && player2 == "paper") {
+        return "Result: Player 2 Wins!"
+    } else if (player1 == "paper" && player2 == "rock") {
+        return "Result: Player 1 Wins!"
+    } else if (player1 == "paper" && player2 == "paper") {
+        return "Result: Draw"
+    } else if (player1 == "scissors" && player2 == "paper") {
+        return "Result: Player 1 Wins!"
+    } else if (player1 == "paper" && player2 == "scissors") {
+        return "Result: Player 2 Wins!"
+    } else if (player1 == "scissors" && player2 == "scissors") {
+        return "Result: Draw"
+    } else {
+        return "Invalid input"
+    }
+}
+console.log(game("scissors", "paper"))
