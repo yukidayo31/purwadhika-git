@@ -30,7 +30,6 @@ console.log(maxValue(b))
 
 
 // Create a function that can create a triangle pattern according to the height
-let c = 4
 
 function numberTriangle(rows) {
     let value = 1
@@ -48,7 +47,7 @@ function numberTriangle(rows) {
     }
     return numberTriangle
 }
-console.log((numberTriangle(c)))
+console.log((numberTriangle(4)))
 
 
 //  FizzBuzz (n = 6, n = 15) (3=fizz, 5=buzz, 3*5=fizzbuzz)

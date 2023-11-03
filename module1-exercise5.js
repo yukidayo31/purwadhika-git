@@ -146,7 +146,7 @@ let check_duplicate_in_array = (input_array) => {
     return [...new Set(duplicate_elements)]; 
     
 }; 
-console.log(check_duplicate_in_array([1, 2, 2, 2, 3, 3, 4, 5, 5]))
+console.log(check_duplicate_in_array([1,1,2]))
 
 
 // a function to find the difference in 2 given array
