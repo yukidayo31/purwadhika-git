@@ -77,4 +77,4 @@ function fibonacci(num) {
 	}
 	return (sum);
 }
-console.log(fibonacci(15))
+console.log(fibonacci(5))
